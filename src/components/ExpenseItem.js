@@ -6,9 +6,9 @@ import { AppContext } from "../context/AppContext";
 const ExpenseItem = (props) => {
     const { dispatch, currency } = useContext(AppContext);
 
-    const handleDeleteExpense = () => {
+    const DecreaseAllocation = () => {
         dispatch({
-            type: "DELETE_EXPENSE",
+            type: "Decrease_EXPENSE",
             payload: props.id,
         });
     };
@@ -45,7 +45,8 @@ const ExpenseItem = (props) => {
                 <AiFillMinusCircle
                     size="2.5em"
                     color="red"
-                    onClick={handleDeleteExpense}
+                    onClick={() => DecreaseAllocation()}
+
                 >del</AiFillMinusCircle>
             </td>
         </tr>

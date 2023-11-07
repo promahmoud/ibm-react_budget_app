@@ -44,12 +44,12 @@ export const AppReducer = (state, action) => {
         ...state,
         expenses: [...red_expenses],
       };
-    case "DELETE_EXPENSE":
+    case "Decrease_EXPENSE":
       action.type = "DONE";
       state.expenses.map((currentExp) => {
         if (currentExp.name === action.payload) {
           budget = state.budget + currentExp.cost;
-          currentExp.cost = 0;
+          currentExp.cost -= 10;
         }
         return currentExp;
       });
@@ -79,7 +79,7 @@ export const AppReducer = (state, action) => {
 
 // 1. Sets the initial state when the app loads
 const initialState = {
-  budget: 3000,
+  budget: 20000,
   expenses: [
     { id: "Marketing", name: "Marketing", cost: 750 },
     { id: "Finance", name: "Finance", cost: 300 },
