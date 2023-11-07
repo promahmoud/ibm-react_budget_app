@@ -1,6 +1,3 @@
-# coding-project-template
-
-
 ![](./screencapture-localhost-3000-2023-11-07-22_10_08.png)
 
 # Getting Started with Create React App
